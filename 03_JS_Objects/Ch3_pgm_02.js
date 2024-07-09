@@ -9,10 +9,14 @@ var book2Author = "Philip Pullman";
 var book3Title = "The Adventures of Tom Sawyer";
 var book3Author = "Mark Twain";
 
+var book4Title = "1984";
+var book4Author = "George Orwell";
+
 console.log("There are three books so far...");
 console.log(book1Title + " by " + book1Author);
 console.log(book2Title + " by " + book2Author);
 console.log(book3Title + " by " + book3Author);
+console.log(book4Title + " by " + book4Author);
 
 
 

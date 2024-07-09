@@ -1,14 +1,21 @@
 // A book as an object
 
-var book;
-
-book = {
-    title : "The Hobbit",
-    author : "J. R. R. Tolkien",
+var book1;
+var book2;
+book1 = {
+    title : "1984",
+    author : "george orwell",
     published : 1937
 };
 
-console.log(book);
+console.log(book1);
+book2 = {
+    title : "The Hobbit",
+    author : "J. R. R. Tolkien",
+    published : 1939
+};
+
+console.log(book2);
 
 
 
