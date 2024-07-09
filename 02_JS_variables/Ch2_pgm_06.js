@@ -2,12 +2,13 @@
 
 var playerName;
 var locationName;
-
+var score;
 playerName = "Lionel Messi";
 locationName = "Argentina";
+score = 200;
 
 console.log(playerName + " is in " + locationName);
-
+console.log(playerName+" is scored "+score);
 
 
 /* Further Adventures
