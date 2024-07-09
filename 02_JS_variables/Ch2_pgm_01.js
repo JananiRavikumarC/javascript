@@ -3,6 +3,7 @@
 var score;
 var score1;
 var score2;
+var score3;
 
 /* Further Adventures
  *
