@@ -10,9 +10,9 @@ player1 = {
 
 player1.attempted = 1;
 player1.correct = 1;
-player1.score = 50;
+player1.score = 100;
 
-
+console.log(player1);
 
 /* Further Adventures
  *
