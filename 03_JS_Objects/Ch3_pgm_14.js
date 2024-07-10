@@ -9,8 +9,13 @@ var questionAndAnswer = {
 	correctAnswer: "Paris",
 	marksForQuestion: 2
 };
-
-
+console.log(questionAndAnswer.question);
+console.log(`
+	1. ${questionAndAnswer.answer1}
+	2. ${questionAndAnswer.answer2}
+	3. ${questionAndAnswer.answer3}
+	4. ${questionAndAnswer.answer4}
+	`);
 
 /* Further Adventures
  *
