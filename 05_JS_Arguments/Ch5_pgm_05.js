@@ -1,19 +1,33 @@
 // Using the square function
-
 var square;
-
+var cube;
+var squareRoot;
 square = function (numberToSquare) {
   var result;
   result = numberToSquare * numberToSquare;
   console.log(numberToSquare + " * " + numberToSquare + " = " + result);
 };
-
 square(10);
 square(-2);
 square(1111);
 square(0.5);
-
-
+cube = function(numberToCube){
+  var result;
+  result = numberToCube * numberToCube * numberToCube;
+  console.log(numberToCube + "*" + numberToCube + "*" + numberToCube + "=" + result );
+};
+cube(9);
+cube(90);
+cube(23);
+cube(4);
+var squareRoot = function(number){
+  var result = Math.sqrt(number);
+  console.log("The square root of " + number + " is " + result);
+};
+squareRoot(9);
+squareRoot(25);
+squareRoot(144);
+squareRoot(0.25);
 
 /* Further Adventures
  *

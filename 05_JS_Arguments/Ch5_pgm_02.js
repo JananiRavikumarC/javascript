@@ -6,11 +6,15 @@ var showMessage;
 msg = "It's full of stars!";
 
 showMessage = function () {
-	console.log(message);
+	console.log(msg);
 };
 
 showMessage();
-
+var anothermsg = "day is awesome!!!";
+console.log(msg);
+console.log(anothermsg);
+var commsg = msg + "" + anothermsg;
+console.log(commsg);
 
 
 /* Further Adventures

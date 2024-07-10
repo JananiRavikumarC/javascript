@@ -5,7 +5,7 @@ var player2;
 var showPlayerName;
 
 showPlayerName = function (playerName) {
-    console.log(playerName);
+    console.log(playerName.toUpperCase());
 };
 
 player1 = {
@@ -22,7 +22,11 @@ player2 = {
 
 showPlayerName(player1.name);
 showPlayerName(player2.name);
-
+showPlayerName = function(playerName){
+    console.log(playerName.toLowerCase());
+}
+showPlayerName(player1.name);
+showPlayerName(player2.name);
 
 
 /* Further Adventures

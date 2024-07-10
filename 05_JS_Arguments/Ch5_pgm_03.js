@@ -3,11 +3,17 @@
 var showMessage;
 
 showMessage = function (message) {
-	console.log("The message is: " + message);
+	console.log("The msg is: " + message);
 };
 
-showMessage("It's full of stars!");
+showMessage("Day delight!!!!");
+showMessage("Day is awesome!!!");
+showMessage("Fun unlimited");
+showMessage = function (message) {
+	console.log("Message received: " + message + ". Extra text");
+};
 
+showMessage("New msg");
 
 
 /* Further Adventures
