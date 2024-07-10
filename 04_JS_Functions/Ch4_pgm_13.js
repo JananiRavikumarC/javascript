@@ -4,7 +4,8 @@ var player1;
 var player2;
 var player;
 var showPlayerInfo;
-
+var showplayerplace;
+var showplayerhealth;
 player1 = {
     name: "Kandra",
     place: "The Dungeon of Doom",
@@ -16,7 +17,13 @@ player2 = {
     place: "The Old Library",
     health: 40
 };
+showplayerplace = function (player) {
+    console.log(player.name + " is in " + player.place);
+};
 
+showplayerhealth = function (player) {
+    console.log(player.name + " has health " + player.health);
+};
 showPlayerInfo = function () {
     console.log(player.name);
     console.log("------------------------------");

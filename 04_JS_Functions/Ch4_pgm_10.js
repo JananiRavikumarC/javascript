@@ -3,7 +3,7 @@
 var movie1;
 var showMovieInfo;
 var movie;
-
+var movie2;
 movie1 = {
     title: "Inside Out",
     actors: "Amy Poehler, Bill Hader",
@@ -17,11 +17,18 @@ showMovieInfo = function () {
   console.log("Directors: " + movie.directors);
   console.log("------------------------------");
 };
+movie2 = {};
 
-movie = movie1;
+movie = movie2;
 
 showMovieInfo();
-
+movie2 = {
+  title: "Inception",
+    actors: "Leonardo DiCaprio, Joseph Gordon-Levitt",
+    directors: "Christopher Nolan"
+};
+movie = movie2;
+showMovieInfo();
 
 
 /* Further Adventures

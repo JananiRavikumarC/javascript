@@ -9,7 +9,12 @@ showMovieInfo = function () {
   console.log("Directors: " + movie.directors);
   console.log("------------------------------");
 };
-
+var movie = {
+  title:"Inception",
+  actors:"Leonardo DiCaprio, Joseph Gordon-Levitt",
+  directors:"Christopher Nolan"
+};
+showMovieInfo();
 
 
 /* Further Adventures
