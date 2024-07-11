@@ -2,7 +2,7 @@
 
 var planet1;
 var getPlanetInfo;
-
+var planet2;
 planet1 = {
     name: "Jupiter",
     position: 5,
@@ -10,12 +10,19 @@ planet1 = {
     radius: 69911,
     sizeRank: 1
 };
-
+planet2 = {
+    name:"Earth",
+    position : 3,
+    type : "Terrestrial Planet",
+    radius : 6371,
+    sizeRank : 5
+}
 getPlanetInfo = function (planet) {
-    return planet.name + ": planet number " + planet.position;
+    return "planet:\n" + "Planet Name:" + planet.name+ " planet number: " + planet.position + "planet type:" + planet.type + "planet radius:" + planet.radius + "size rank:"+ planet.sizeRank ;
 };
 
 console.log(getPlanetInfo(planet1));
+console.log(getPlanetInfo(planet2));
 
 
 
