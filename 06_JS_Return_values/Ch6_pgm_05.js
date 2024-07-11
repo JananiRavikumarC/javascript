@@ -2,12 +2,14 @@
 
 var totalCost;
 
-totalCost = function (callOutCharge, costPerHour, numberOfHours) {
-	return callOutCharge + costPerHour * numberOfHours;
+totalCost = function (callOutCharge, costPerHour, numberOfHours,discount) {
+
+	return callOutCharge + costPerHour * numberOfHours - discount;
 };
 
-console.log("$" + totalCost(30, 40, 3));
-
+console.log("$" + totalCost(30, 40, 3,0));
+console.log("$" + totalCost(30, 40, 12,0));
+console.log("$" + totalCost(30, 40, 3,20));
 
 
 /* Further Adventures

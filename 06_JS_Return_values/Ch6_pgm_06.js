@@ -21,7 +21,12 @@ totalCost = function (callOutCharge, costPerHour, numberOfHours) {
     return callOutCharge + costPerHour * numberOfHours;
 };
 
-
+getHelloTo("hello!!!!!")
+getHelloTo("iccccccccceeeeeeee")
+sum(30,90)
+sum(78,98)
+totalCost(20,90,86)
+totalCost(8,9,7)
 
 /* Further Adventures
  *
