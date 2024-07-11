@@ -7,7 +7,7 @@ var getPlayerInfo;
 var getBorder;
 
 getPlayerName = function (playerName) {
-    return playerName;
+    return playerName || "unknown player";
 };
 
 getPlayerHealth = function (playerName, playerHealth) {
@@ -36,7 +36,8 @@ getPlayerInfo = function (playerName, playerPlace, playerHealth) {
 };
 
 console.log(getPlayerInfo("Kandra", "The Dungeon of Doom", 50));
-
+console.log(getPlayerInfo("joe", "The Love", 85));
+console.log(getPlayerInfo());
 
 
 

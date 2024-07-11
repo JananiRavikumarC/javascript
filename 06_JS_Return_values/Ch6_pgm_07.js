@@ -3,10 +3,18 @@
 var getPlayerName;
 
 getPlayerName = function (playerName) {
-    return playerName;
+    var modifiedname = "====" + playerName + "====";
+    var borderedName = "\n|\n|" + playerName + "\n|";
+
+    return {
+        withEqualSigns: modifiedname,
+        withBorder: borderedName
+    };
 };
 
-console.log(getPlayerName("Kandra"));
+console.log(getPlayerName("Kandra").withEqualSigns);
+console.log(getPlayerName("Kandra").withBorder);
+
 
 
 
