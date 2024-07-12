@@ -1,13 +1,20 @@
 // Accessing array elements
 
-var scores = [ 3, 1, 8, 2 ];
+var scores = [ 3, 1, 8, 2,];
+scores.push(4);
 
 console.log("There are " + scores.length + " scores:");
 console.log("The first score is " + scores[0]); 
 console.log("The second score is " + scores[1]);
 console.log("The third score is " + scores[2]);
 console.log("The fourth score is " + scores[3]);
-
+console.log("The fifth score is " + scores[4]);
+console.log("The last score is " + scores[scores.length - 1]);
+scores.push(9);
+console.log("Now are " + scores.length + "scores:");
+for (var i = 0; i < scores.length; i++){
+    console.log("Score" + (i + 1)+ "is" + scores[i]);
+}
 
 
 /* Further Adventures

@@ -1,11 +1,21 @@
 // Using a variable as an index
 
 var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-var dayInWeek = 4;
+var dayInWeek = 2;
 
 console.log( days[dayInWeek] );
 console.log( days[dayInWeek - 1] );
-
+var getDay = function(dayIndex){
+    if(dayIndex < 0 || dayIndex >= days.length){
+        return "Invalid day index";
+    }
+    return days[dayIndex];
+}
+console.log(getDay(4));
+console.log(getDay(1));
+console.log(getDay(0));
+console.log(getDay(5));
+console.log(getDay(-1));
 
 
 /* Further Adventures
