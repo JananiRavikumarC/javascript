@@ -8,16 +8,19 @@ var getQuiz = function () {
         next,
         getQuestion,
         checkAnswer,
-        submit;
+        submit,
+        getHint;
       
     questions = [
       {
         question: "What is the highest mountain in the world?",
-        answer: "Everest"
+        answer: "Everest",
+        hint: "It is located in the Himalayas."
       },
       {
         question: "What is the highest mountain in Scotland?",
-        answer: "Ben Nevis"
+        answer: "Ben Nevis",
+        hint: "It is located near Fort William."
       }
     ];
     
@@ -37,7 +40,13 @@ var getQuiz = function () {
         return "You have finished the quiz.";
       }
     };
-    
+    getQuestion = function () {
+      if (inPlay) {
+        return questions[qIndex].question;
+      } else {
+        return "You have finished the quiz.";
+      }
+    };
     checkAnswer = function (userAnswer) {
       if (userAnswer === questions[qIndex].answer) {
         console.log("Correct!");
@@ -46,7 +55,13 @@ var getQuiz = function () {
         console.log("No, the answer is " + questions[qIndex].answer);
       }
     };
-    
+    getHint = function () {
+      if (inPlay) {
+        return questions[qIndex].hint;
+      } else {
+        return "You have finished the quiz.";
+      }
+    };
     submit = function (userAnswer) {
       var message = "You have finished the quiz.";
       
@@ -61,14 +76,18 @@ var getQuiz = function () {
     
     return {
       quizMe: getQuestion,
-      submit: submit
+      submit: submit,
+      helpMe: getHint
     };
   };
   
   var quiz = getQuiz();
-  
-  
-  
+  console.log(quiz.quizMe());
+  console.log(quiz.helpMe());
+  console.log(quiz.submit("Everest"));
+  console.log(quiz.quizMe());
+  console.log(quiz.helpMe());
+  console.log(quiz.submit("Ben Nevis"));
   /* Further Adventures
    *
    * 1) Run the program.

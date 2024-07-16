@@ -5,21 +5,18 @@ var getGuesser = function () {
   
     return function (userNumber) {
       if (userNumber === secret) {
-        return "Well done!";
-      } else {
-        if (userNumber > secret) {
-          return "Too high!";
+        return "Well done! You guessed the secret number.";
+      }else if(userNumber < secret) {
+          return "Too low! Try a higher number.";
         } else {
-          return "Too low!";
+          return "Too high! Try a lower number.";
         }
       }
     };
-  };
   
   var guess = getGuesser();
   
-  
-  
+  console.log(guess(5));  
   /* Further Adventures
    *
    * 1) Run the program

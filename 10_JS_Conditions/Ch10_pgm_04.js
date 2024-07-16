@@ -1,11 +1,11 @@
 // Guess the random number
 
 var getGuesser = function () {
-    var secret = Math.floor(Math.random() * 10 + 1);
+    var secret = Math.floor(Math.random() * (50 - 30 + 1)) + 30;
   
     return function (userNumber) {
       if (userNumber === secret) {
-        return "Well done!";
+        return "Well done!You guessed the secret number.";
       } else {
         return "Unlucky, try again.";
       }
@@ -13,8 +13,11 @@ var getGuesser = function () {
   };
   
   var guess = getGuesser();
-  
-  
+  var between = function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+console.log(between(1, 5));
+console.log(between(100, 200));
   
   /* Further Adventures
    *
