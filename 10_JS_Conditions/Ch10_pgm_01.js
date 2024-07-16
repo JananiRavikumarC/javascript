@@ -1,13 +1,18 @@
 // Guess the number
 
 var secret = 8;
-
 var guess = function (userNumber) {
-  if (userNumber === secret) {
-    console.log("Well done!");
-  }
+if (userNumber === secret) {
+  console.log("Well done! You guessed the secret number.");
+} else if (userNumber > secret) {
+  console.log("Too high! Try a lower number.");
+} else {
+  console.log("Too low! Try a higher number.");
+}
 };
-
+guess(5);
+guess(10);
+guess(8);
 
 
 /* Further Adventures

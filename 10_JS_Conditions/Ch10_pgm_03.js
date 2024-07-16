@@ -7,7 +7,7 @@ var getGuesser = function () {
       if (userNumber === secret) {
         console.log("Well done!");
       } else {
-        console.log("Unlucky, try again.");
+        console.log("Unlucky, try again!!.");
       }
     };
   };

@@ -4,12 +4,14 @@ var secret = 8;
 
 var guess = function (userNumber) {
   if (userNumber === secret) {
-    console.log("Well done!");
-  } else {
-    console.log("Unlucky, try again.");
+    console.log("Well done! You guessed the secret number.");
+  } else if (userNumber !== secret) {
+    console.log("Not quite, try again. The secret number is not " + userNumber + ".");
   }
 };
-
+guess(5);
+guess(10);
+guess(8);
 
 
 /* Further Adventures

@@ -116,7 +116,13 @@ var spacer = {
     this.addItem = function (item) {
       this.items.push(item);
     };
-  
+    this.dropLastItem = function () {
+      if (this.items.length > 0) {
+          return this.items.pop();
+      } else {
+          return "No items to drop.";
+      }
+  };
     this.getNameInfo = function () {
       return this.name;
     };
@@ -175,10 +181,16 @@ var spacer = {
   player1.place = library;
   player1.addItem("a rusty key");
   player1.addItem("The Sword of Doom");
-  
+  var player2 = new Player("Thorn", 60);
+player2.place = library;
+player2.addItem("a mysterious potion");
+player2.addItem("a map");
   player1.showInfo("=");
-  
-  
+  player2.showInfo("=");
+  console.log(player1.dropLastItem());
+  console.log(player2.dropLastItem());
+  player1.showInfo("=");
+player2.showInfo("=");
   
   /* Further Adventures
    *
