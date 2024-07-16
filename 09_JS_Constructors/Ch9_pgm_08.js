@@ -7,28 +7,27 @@ var CalendarEvent = function (title, startDate, startTime, endTime) {
     this.endTime = endTime;
   
     this.showEvent = function () {
-        var dateString = [
-            this.startDate,
-            ", from ",
-            this.startTime,
-            " to ",
-            this.endTime
-        ].join("");
-      
-        console.log(this.title);
-        console.log(dateString);
+        var eventString = this.title + ": " + this.startDate + " - (" + this.startTime + " - " + this.endTime + ")";
+        console.log(eventString);
     };
 };
 
-var calEvent = new CalendarEvent(
+var calEvent1 = new CalendarEvent(
     "Annual Review",
     "3/5/16",
     "4.00pm",
     "5.00pm"
 );
 
-calEvent.showEvent();
+calEvent1.showEvent();
+var calEvent2 = new CalendarEvent(
+    "Team Meeting",
+    "3/7/16",
+    "10.00am",
+    "11.00am"
+);
 
+calEvent2.showEvent();
 
 
 /* Further Adventures

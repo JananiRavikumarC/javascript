@@ -23,10 +23,24 @@ var planets = [
     buildPlanet( "Mercury", 1, "Terrestrial" )
 ];
 
-planets.forEach(function (planet) {
+planets.forEach(function (planet,index) {
     planet.showPlanet();
+    if (index < planets.length - 1) {
+        console.log("--------------------");
+    }
 });
+planets.push(
+    buildPlanet("Saturn", 6, "Gas Giant"),
+    buildPlanet("Earth", 3, "Terrestrial")
+);
 
+console.log("\nAfter adding two more planets:");
+planets.forEach(function (planet, index) {
+    planet.showPlanet();
+    if (index < planets.length - 1) {
+        console.log("--------------------"); // Visual separation
+    }
+});
 
 
 /* Further Adventures

@@ -26,9 +26,27 @@ question1.addOption("Bordeaux");
 question1.addOption("F");
 question1.addOption("Paris");
 question1.addOption("Brussels");
-
+question1.addOption("Lyon");
 question1.showQuestion();
+var question2 = new QuizQuestion(
+    "What is the largest planet in our solar system?",
+    "Jupiter"
+);
 
+question2.addOption("Earth");
+question2.addOption("Saturn");
+question2.addOption("Mars");
+question2.addOption("Jupiter");
+
+var question3 = new QuizQuestion(
+    "Which element has the chemical symbol 'H'?",
+    "Hydrogen"
+);
+
+question3.addOption("Helium");
+question3.addOption("Oxygen");
+question3.addOption("Hydrogen");
+question3.addOption("Nitrogen");
 
 
 /* Further Adventures

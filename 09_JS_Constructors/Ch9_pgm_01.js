@@ -15,12 +15,18 @@ var planet1 = buildPlanet(
     5,
     "Gas Giant"
 );
-
-console.log(planet1.name);
-console.log(planet1.position);
-console.log(planet1.type);
-
-
+console.log("Planet 1:");
+console.log("Name:",planet1.name);
+console.log("Position:",planet1.position);
+console.log("Type:",planet1.type);
+var planet2 = buildPlanet(
+    "Mars",
+    4,
+    "Terrestrial"
+);
+console.log("\nPlanet 2:");
+console.log("Name:", planet2.name);
+console.log("Type:", planet2.type);
 
 /* Further Adventures
  *
