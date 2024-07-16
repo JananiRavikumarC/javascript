@@ -15,7 +15,11 @@ removed = items.pop();
 console.log(removed + " was removed");
 console.log(items.join(" and "));
 
-
+items.push("The Eiffel Tower");
+console.log(items.join(" and"));
+items[1] = ":The Great Wall of China";
+items.push("Niagara Falls","Machu Picchu");
+console.log(items.log(items.join(" and")));
 
 /* Further Adventures
  *

@@ -53,9 +53,8 @@ var spacer = {
   
   var getPlayerItems = function (player) {
     var itemsString = "Items:" + spacer.newLine();
-  
-    player.items.forEach(function (item) {
-      itemsString += "   - " + item + spacer.newLine();
+    player.items.forEach(function (item, index) {
+      itemsString += "   " + (index + 1) + ". " + item + spacer.newLine();    
     });
   
     return itemsString;
@@ -101,8 +100,23 @@ var spacer = {
   
   showPlayerInfo(player1, "*");
   
-  
-  
+  player1.items.push(" a shiny sword");
+  showPlayerInfo(player1,"*");
+  player1.items.pop();
+  showPlayerInfo(player1,"=");
+  var showItem = function (player, itemNumber) {
+    if (itemNumber > 0 && itemNumber <= player.items.length) {
+        console.log(player.items[itemNumber - 1]);
+    } else {
+        console.log("Item not found.");
+    }
+};
+showItem(player1, 2);
+var addItem = function (player, itemTitle) {
+  player.items.push(itemTitle);
+};
+addItem(player1, "a magical potion");
+showPlayerInfo(player1, "=");
   
   /* Further Adventures
    *

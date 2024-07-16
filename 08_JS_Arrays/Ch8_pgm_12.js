@@ -22,8 +22,33 @@ var displayQuestion = function (questionAndAnswer) {
     ],
     correctAnswer : "Paris"
   };
+    var question2 = {
+      question: "What is the largest planet in our solar system?",
+      answers: [
+          "Earth",
+          "Jupiter",
+          "Saturn",
+          "Mars"
+      ],
+      correctAnswer: "Jupiter"
+  };
   
-  displayQuestion(question1);
+  var question3 = {
+      question: "What is the chemical symbol for water?",
+      answers: [
+          "H2O",
+          "O2",
+          "CO2",
+          "H2"
+      ],
+      correctAnswer: "H2O"
+    };
+    var questions = [question1, question2, question3];
+    questions.forEach(displayQuestion);
+  //displayQuestion(questions[0]);
+  //displayQuestion(questions[1]);
+  //displayQuestion(questions[2]);
+
   
   
   

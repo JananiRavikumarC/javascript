@@ -4,9 +4,10 @@ var players;
 var showArguments;
 
 players = [ "Dax", "Jahver", "Kandra" ];
-
+players.push("Liam");
+players.push("Emma");
 showArguments = function (item, index, wholeArray) {
-  console.log("Item: " + item);
+  console.log("Item: " + wholeArray[index]);
   console.log("Index: " + index);
   console.log("Array: " + wholeArray);
 };
