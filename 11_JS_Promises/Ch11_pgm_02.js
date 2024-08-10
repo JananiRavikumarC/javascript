@@ -12,8 +12,9 @@ const doSomething = callback => {
   doSomething((err, result) => {
     if (err) {
       return console.log(err)
-    }
+    }else{
     return console.log(result)
+    }
   })
 
 
