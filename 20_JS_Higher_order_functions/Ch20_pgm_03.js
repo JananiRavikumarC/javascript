@@ -1,6 +1,43 @@
 // Use the countries information, in the data folder. Sort countries by name, by capital, by population
 
+// Sort by name
+const sortByName = countries.sort((a, b) => a.name.localeCompare(b.name));
+
+// Sort by capital
+const sortByCapital = countries.sort((a, b) => a.capital.localeCompare(b.capital));
+
+// Sort by population
+const sortByPopulation = countries.sort((a, b) => b.population - a.population);
+
+console.log(sortByName);
+console.log(sortByCapital);
+console.log(sortByPopulation);
+
 // *** Find the 10 most spoken languages:
+function mostSpokenLanguages(countries, topN) {
+    const languageCount = {};
+  
+    countries.forEach(country => {
+      country.languages.forEach(language => {
+        if (languageCount[language]) {
+          languageCount[language]++;
+        } else {
+          languageCount[language] = 1;
+        }
+      });
+    });
+  
+    const sortedLanguages = Object.entries(languageCount)
+      .map(([language, count]) => ({ country: language, count }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, topN);
+  
+    return sortedLanguages;
+  }
+  
+  console.log(mostSpokenLanguages(countries, 10));
+  console.log(mostSpokenLanguages(countries, 3));
+  
 
 // Your output should look like this
 console.log(mostSpokenLanguages(countries, 10))
@@ -27,6 +64,16 @@ console.log(mostSpokenLanguages(countries, 3))
 
 
 // *** Use countries_data.js file create a function which create the ten most populated countries
+function mostPopulatedCountries(countries, topN) {
+    return countries
+      .map(country => ({ country: country.name, population: country.population }))
+      .sort((a, b) => b.population - a.population)
+      .slice(0, topN);
+  }
+  
+  console.log(mostPopulatedCountries(countries, 10));
+  console.log(mostPopulatedCountries(countries, 3));
+  
 
 console.log(mostPopulatedCountries(countries, 10))
 
