@@ -1,5 +1,26 @@
 // Write a function called tenMostFrequentWords which get the ten most frequent word from a string?
 
+function tenMostFrequentWords(paragraph, topN = 10) {
+    const words = paragraph.match(/\b\w+\b/g);
+    const wordCounts = {};
+    words.forEach(word => {
+      const lowerCaseWord = word.toLowerCase();
+      wordCounts[lowerCaseWord] = (wordCounts[lowerCaseWord] || 0) + 1;
+    });
+    const sortedWords = Object.entries(wordCounts)
+      .map(([word, count]) => ({ word, count }))
+      .sort((a, b) => b.count - a.count);
+    return sortedWords.slice(0, topN);
+  }
+  
+  // Example usage
+  const paragraph = `I love teaching. If you do not love teaching what else can you love. 
+  I love Python if you do not love something which can give you all the capabilities 
+  to develop an application what else can you love.`;
+  
+  console.log(tenMostFrequentWords(paragraph));
+  console.log(tenMostFrequentWords(paragraph, 10));
+  
 paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
 console.log(tenMostFrequentWords(paragraph))
 
